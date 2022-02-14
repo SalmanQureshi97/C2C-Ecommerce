@@ -1,0 +1,15 @@
+.test {
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fixed-size-img-header {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+}
+mdb-carousel .carousel-indicators {
+  display: none;
+}
