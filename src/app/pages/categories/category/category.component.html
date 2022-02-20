@@ -1,0 +1,254 @@
+<!-- Mini-Navbar -->
+<app-mini-nav></app-mini-nav>
+<!-- Mini-Navbar -->
+
+<!-- BreadCrums -->
+<app-breadcrums></app-breadcrums>
+<!-- BreadCrums -->
+
+<!-- Main Content -->
+
+<nav
+  style="top: 58px"
+  #navbar
+  class="navbar sticky-top navbar-expand-lg navbar-light bg-light"
+>
+  <div class="container" style="align-content: center">
+    <p style="margin-top: 10px">
+      204,127 Listings for
+      <span class="badge bg-dark my-badge"
+        >Polos <i class="fas fa-times-circle"></i>
+      </span>
+      <span class="badge bg-dark my-badge"
+        >Polos <i class="fas fa-times-circle"></i>
+      </span>
+      <span class="badge bg-dark my-badge"
+        >Polos <i class="fas fa-times-circle"></i>
+      </span>
+    </p>
+    <div mdbDropdown class="dropdown">
+      <button
+        class="btn btn-light dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        aria-expanded="false"
+        [ngModel]="filter"
+        mdbDropdownToggle
+      >
+        {{ filter }}
+      </button>
+      <ul
+        mdbDropdownMenu
+        class="dropdown-menu"
+        aria-labelledby="dropdownMenuButton"
+      >
+        <li><a class="dropdown-item" href="#">Sort By Price</a></li>
+        <li><a class="dropdown-item" href="#">Sort By New</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 20px">
+  <div class="row">
+    <div class="col-3 sticky">
+      <mdb-accordion [flush]="true">
+        <h3>Filters</h3>
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader><h6>Brand</h6></ng-template>
+          <ng-template mdbAccordionItemBody>
+            <mdb-form-control>
+              <input mdbInput type="text" id="form1" class="form-control" />
+              <label mdbLabel class="form-label" for="form1">Search</label>
+            </mdb-form-control>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Gucci</label
+                >
+                <span class="badge my-stat-badge rounded-pill bg-info"
+                  >999+</span
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Prada</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Khaddi</label
+                >
+              </li>
+            </ul></ng-template
+          >
+        </mdb-accordion-item>
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader><h6>Price</h6></ng-template>
+          <ng-template mdbAccordionItemBody>
+            <mdb-range [min]="0" [max]="100"></mdb-range>
+          </ng-template>
+        </mdb-accordion-item>
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader><h6>Tags</h6></ng-template>
+          <ng-template mdbAccordionItemBody>
+            <mdb-form-control>
+              <input mdbInput type="text" id="form1" class="form-control" />
+              <label mdbLabel class="form-label" for="form1">Search</label>
+            </mdb-form-control>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Oversized</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Trendy</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >New</label
+                >
+              </li>
+            </ul></ng-template
+          >
+        </mdb-accordion-item>
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader><h6>Location</h6></ng-template>
+          <ng-template mdbAccordionItemBody>
+            <mdb-form-control>
+              <input mdbInput type="text" id="form1" class="form-control" />
+              <label mdbLabel class="form-label" for="form1">Search</label>
+            </mdb-form-control>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Karachi</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Islamabad</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Lahore</label
+                >
+              </li>
+            </ul></ng-template
+          >
+        </mdb-accordion-item>
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader><h6>Condition</h6></ng-template>
+          <ng-template mdbAccordionItemBody>
+            <mdb-form-control>
+              <input mdbInput type="text" id="form1" class="form-control" />
+              <label mdbLabel class="form-label" for="form1">Search</label>
+            </mdb-form-control>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Slightly Used</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault">
+                  Almost New</label
+                >
+              </li>
+              <li class="list-group-item">
+                <input
+                  mdbCheckbox
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Worn Out</label
+                >
+              </li>
+            </ul></ng-template
+          >
+        </mdb-accordion-item>
+      </mdb-accordion>
+    </div>
+    <div class="col-9">
+      <mat-grid-list cols="3" rowHeight="1:1.5" [gutterSize]="'10px'">
+        <mat-grid-tile style="margin: 20px" *ngFor="let item of slides"
+          ><app-product-card [slide]="item"></app-product-card
+        ></mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->

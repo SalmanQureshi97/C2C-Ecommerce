@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { JumbotronComponent } from './jumbotron/jumbotron.component';
+
+import { CategoriesRoutingModule } from './categories-routing.module';
+import { CategoryComponent } from './category/category.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 // MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
@@ -17,30 +20,16 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LayoutModule } from '@angular/cdk/layout';
-import { ImageListComponent } from './image-list/image-list.component';
-import { FeaturedComponent } from './featured/featured.component';
-import { BrandListComponent } from './brand-list/brand-list.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { MiniNavComponent } from './mini-nav/mini-nav.component';
-import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
+import { FormsModule } from '@angular/forms';
 
+import { MatGridListModule } from '@angular/material/grid-list';
 @NgModule({
-  declarations: [
-    JumbotronComponent,
-    ImageListComponent,
-    FeaturedComponent,
-    BrandListComponent,
-    ProductCardComponent,
-    ProductListComponent,
-    MiniNavComponent,
-    BreadcrumsComponent,
-  ],
+  declarations: [CategoryComponent],
   imports: [
-    SlickCarouselModule,
+    FormsModule,
+    CommonModule,
+    SharedModule,
+    CategoriesRoutingModule,
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,
@@ -56,17 +45,7 @@ import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    CommonModule,
-  ],
-  exports: [
-    JumbotronComponent,
-    ImageListComponent,
-    FeaturedComponent,
-    BrandListComponent,
-    ProductListComponent,
-    ProductCardComponent,
-    MiniNavComponent,
-    BreadcrumsComponent,
+    MatGridListModule,
   ],
 })
-export class SharedModule {}
+export class CategoriesModule {}

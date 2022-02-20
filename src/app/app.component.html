@@ -3,5 +3,5 @@
 </div>
 <router-outlet></router-outlet>
 <div class="footer">
-  <app-footer></app-footer>
+  <app-footer *ngIf="containsProducts()"></app-footer>
 </div>
