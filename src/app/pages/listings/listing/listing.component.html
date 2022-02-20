@@ -1,0 +1,245 @@
+<!-- Mini-Navbar -->
+<app-mini-nav></app-mini-nav>
+<!-- Mini-Navbar -->
+
+<!-- BreadCrums -->
+<app-breadcrums></app-breadcrums>
+<!-- BreadCrums -->
+
+<!-- Main Content -->
+
+<div class="container">
+  <div class="row" style="margin-top: 20px">
+    <div class="col-8">
+      <mdb-carousel dark [controls]="true">
+        <mdb-carousel-item class="carousel" *ngFor="let slide of slides">
+          <img [src]="slide.img" class="w-100 image" alt="..." />
+        </mdb-carousel-item>
+      </mdb-carousel>
+      <ngx-slick-carousel
+        style="margin-top: 30px"
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div
+          style="width: 100px; height: 100px"
+          ngxSlickItem
+          *ngFor="let slide of slides"
+        >
+          <img
+            style="width: 100px; height: 100px"
+            [src]="slide.img"
+            class="img-fluid"
+          />
+        </div>
+      </ngx-slick-carousel>
+    </div>
+    <div class="col-4">
+      <div class="container-fluid">
+        <br />
+        <h3 style="text-decoration: double; color: black">Zara</h3>
+        <p>Zara oversized jacket</p>
+        <p>Size : US 34 / EU 50</p>
+        <p>Color : Blue</p>
+        <p>Condition : Barely Used</p>
+        <h6>3500 RPS</h6>
+        <div class="d-grid gap-2">
+          <button class="btn btn-dark" type="button">Purchase</button>
+          <button class="btn btn-default" type="button">Message</button>
+          <button class="btn btn-default" type="button">Offer</button>
+        </div>
+
+        <!-- Authentication Info -->
+        <div
+          style="
+            margin-top: 20px;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+          "
+        >
+          <h2>
+            <span class="badge text-black"
+              ><i style="margin-right: 10px" class="fas fa-check-circle"></i
+              >Authenticated</span
+            >
+          </h2>
+          <p style="padding-left: 15px; padding-right: 15px">
+            Our authentication team has reviewed the images, title, and
+            description of this listing to verify this item. Learn more about
+            the team’s <a href="">authentication process</a>
+          </p>
+        </div>
+        <!-- Authentication Info -->
+        <hr class="solid" />
+        <div style="margin-top: 20px">
+          <h5>
+            <i class="fas fa-user-shield"></i>
+            <a
+              style="margin-left: 5px; text-decoration: underline; color: black"
+              href=""
+              >Buyer Protection Guarantee</a
+            >
+          </h5>
+        </div>
+        <hr class="solid" />
+        <div>
+          <div class="row align-items-center">
+            <div class="col-2">
+              <img
+                style="width: 50px; height: 50px"
+                src="../../../../assets/user.png"
+                class="rounded-circle"
+                alt="Cinque Terre"
+              />
+            </div>
+            <div class="col-6">
+              <h5 style="font-size: medium">Username</h5>
+              <p style="text-decoration: underline; font-size: xx-small">
+                2 Reviews
+              </p>
+              <p
+                style="
+                  margin-top: -10px;
+                  text-decoration: underline;
+                  font-size: x-small;
+                "
+              >
+                12 more listings by Username
+              </p>
+            </div>
+            <div class="col-4" style="margin-left: -10px">
+              <button type="button" class="btn btn-default">Follow</button>
+            </div>
+          </div>
+        </div>
+        <hr class="solid" />
+        <div>
+          <h3 style="text-decoration: double; color: black">Measurements</h3>
+          <p style="font-size: small">
+            Measurements taken by seller with item in hand. Measured with
+            garment laid flat.
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Waist <i class="fas fa-info-circle"></i></th>
+                <th scope="col">Inseam <i class="fas fa-info-circle"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>17 in / 43.2 cm</td>
+                <td>31 in / 78.2 cm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr class="solid" />
+        <div>
+          <h3 style="text-decoration: double; color: black">Description</h3>
+          <p style="font-size: medium; font-weight: lighter">
+            Only shipping to US Almost flawless and unused High quality Japanese
+            denim Message with questions or offers
+          </p>
+        </div>
+        <hr class="solid" />
+        <div>
+          <h3 style="text-decoration: double; color: black">Tags</h3>
+          <ul
+            style="list-style-type: none"
+            class="gap-1 list-group list-group-horizontal"
+          >
+            <li>
+              <span class="badge rounded-pill bg-dark text-white">#Zara</span>
+            </li>
+            <li>
+              <span class="badge rounded-pill bg-dark text-white">#Zara</span>
+            </li>
+            <li>
+              <span class="badge rounded-pill bg-dark text-white">#Zara</span>
+            </li>
+            <li>
+              <span class="badge rounded-pill bg-dark text-white">#Zara</span>
+            </li>
+          </ul>
+        </div>
+        <hr class="solid" />
+        <div class="d-grid gap-2">
+          <button class="btn btn-default" type="button">
+            Report Listing<i
+              style="margin-left: 10px"
+              class="fas fa-exclamation-triangle"
+            ></i>
+          </button>
+        </div>
+        <div>
+          <div
+            style="
+              margin-top: 20px;
+              border-radius: 5px;
+              border-style: solid;
+              border-width: 1px;
+              border-color: black;
+            "
+          >
+            <h2>
+              <span class="badge text-black">Money Back Guarantee</span>
+            </h2>
+            <p
+              style="
+                font-weight: lighter;
+                padding-left: 15px;
+                padding-right: 15px;
+              "
+            >
+              We want you to feel confident buying and selling on Grailed.
+              That’s why we offer refunds for orders that never arrive,
+              inauthentic items, and items that significantly differ from their
+              listing for example, in color, size, condition etc.
+            </p>
+            <mdb-accordion [flush]="true">
+              <mdb-accordion-item>
+                <ng-template mdbAccordionItemHeader
+                  ><i
+                    style="margin-right: 5px"
+                    class="fas fa-hand-holding-usd"
+                  ></i>
+                  Payment Escrow Protection</ng-template
+                >
+                <ng-template mdbAccordionItemBody>
+                  <p style="font-weight: lighter">
+                    Every transaction made through a PayPal account is covered
+                    byPayPal Purchase Protection. If PayPal cannot resolve your
+                    claim, our support team will take over — no dispute goes
+                    unresolved.
+                  </p>
+                </ng-template>
+              </mdb-accordion-item>
+              <mdb-accordion-item>
+                <ng-template mdbAccordionItemHeader>
+                  <i style="margin-right: 5px" class="fas fa-user-nurse"></i>
+                  Almari Protection</ng-template
+                >
+                <ng-template mdbAccordionItemBody>
+                  <p style="font-weight: lighter">
+                    If Paypal is unable to resolve your claim, Grailed
+                    Protection will. Learn more about ourprotection promise.
+                  </p>
+                </ng-template>
+              </mdb-accordion-item>
+            </mdb-accordion>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
