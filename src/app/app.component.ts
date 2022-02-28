@@ -12,6 +12,10 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   containsProducts() {
-    return !this.router.url.includes('/categories');
+    return (
+      !this.router.url.includes('/categories') &&
+      !this.router.url.includes('/listings') &&
+      !this.router.url.includes('/sell')
+    );
   }
 }

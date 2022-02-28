@@ -27,6 +27,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MiniNavComponent } from './mini-nav/mini-nav.component';
 import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
     MdbTooltipModule,
     MdbValidationModule,
     CommonModule,
+    MatStepperModule,
   ],
   exports: [
     JumbotronComponent,
@@ -67,6 +70,24 @@ import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
     ProductCardComponent,
     MiniNavComponent,
     BreadcrumsComponent,
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule,
+    MatGridListModule,
+    SlickCarouselModule,
+    MatStepperModule,
   ],
 })
 export class SharedModule {}

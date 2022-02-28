@@ -1,0 +1,154 @@
+<div class="container" style="padding-top: 20px">
+  <div class="d-flex flex-row mb-3">
+    <div class="p-2">
+      <button type="button" class="btn btn-light btn-floating">
+        <i class="fas fa-arrow-left fa-2x"></i>
+      </button>
+    </div>
+    <div class="p-2"><h3>Add a new Listing</h3></div>
+  </div>
+
+  <hr class="solid" />
+  <mat-stepper
+    class="example-stepper"
+    [orientation]="(stepperOrientation | async)!"
+  >
+    <mat-step [stepControl]="firstFormGroup" label="Details">
+      <form [formGroup]="firstFormGroup">
+        <div class="d-flex flex-row mb-3">
+          <div class="p-2">
+            <div class="input-group mb-3">
+              <div mdbDropdown class="dropdown">
+                <button
+                  class="form-control"
+                  type="button"
+                  id="dropdownMenuButton"
+                  aria-expanded="false"
+                  [ngModel]="type"
+                  mdbDropdownToggle
+                >
+                  {{ type }}
+                </button>
+                <ul
+                  mdbDropdownMenu
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <li><a class="dropdown-item" href="#">Sort By Price</a></li>
+                  <li><a class="dropdown-item" href="#">Sort By New</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="p-2">
+            <mdb-form-control>
+              <input mdbInput type="text" id="form1" class="form-control" />
+              <label mdbLabel class="form-label" for="form1"
+                >Example label</label
+              >
+            </mdb-form-control>
+          </div>
+          <div class="p-2">Flex item 3</div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+        <label for="basic-url" class="form-label">Your vanity URL</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3"
+            >https://example.com/users/</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="basic-url"
+            aria-describedby="basic-addon3"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Amount (to the nearest dollar)"
+          />
+          <span class="input-group-text">.00</span>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            aria-label="Username"
+          />
+          <span class="input-group-text">@</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Server"
+            aria-label="Server"
+          />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">With textarea</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Measurements">
+      <form [formGroup]="secondFormGroup">
+        <p>wow</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup" label="Pricing">
+      <form [formGroup]="thirdFormGroup">
+        <p>wow</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Shipping">
+      <form [formGroup]="thirdFormGroup">
+        <p>wow</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Photos">
+      <form [formGroup]="thirdFormGroup">
+        <p>wow</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

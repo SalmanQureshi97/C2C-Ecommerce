@@ -25,27 +25,6 @@ import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 @NgModule({
   declarations: [CategoryComponent],
-  imports: [
-    FormsModule,
-    CommonModule,
-    SharedModule,
-    CategoriesRoutingModule,
-    MdbAccordionModule,
-    MdbCarouselModule,
-    MdbCheckboxModule,
-    MdbCollapseModule,
-    MdbDropdownModule,
-    MdbFormsModule,
-    MdbModalModule,
-    MdbPopoverModule,
-    MdbRadioModule,
-    MdbRangeModule,
-    MdbRippleModule,
-    MdbScrollspyModule,
-    MdbTabsModule,
-    MdbTooltipModule,
-    MdbValidationModule,
-    MatGridListModule,
-  ],
+  imports: [FormsModule, CommonModule, SharedModule, CategoriesRoutingModule],
 })
 export class CategoriesModule {}

@@ -4,4 +4,5 @@
 <router-outlet></router-outlet>
 <div class="footer">
   <app-footer *ngIf="containsProducts()"></app-footer>
+  <app-mini-footer *ngIf="!containsProducts()"></app-mini-footer>
 </div>
