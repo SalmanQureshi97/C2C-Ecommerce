@@ -1,0 +1,246 @@
+<form>
+  <div style="row-gap: 20px" class="d-flex flex-row">
+    <div class="col p-2">
+      <button
+        style="width: 100%"
+        mat-stroked-button
+        mat-raised-button
+        mat-button
+        [matMenuTriggerFor]="categories"
+      >
+        Category<mat-icon aria-hidden="false" aria-label="Example home icon"
+          >keyboard_arrow_down</mat-icon
+        >
+      </button>
+      <mat-menu #categories="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="tops">Tops</button>
+        <button mat-menu-item [matMenuTriggerFor]="bottoms">Bottom</button>
+        <button mat-menu-item [matMenuTriggerFor]="outwear">Outwear</button>
+        <button mat-menu-item [matMenuTriggerFor]="footwear">Footwear</button>
+        <button mat-menu-item [matMenuTriggerFor]="accessories">
+          Accessories
+        </button>
+      </mat-menu>
+
+      <mat-menu #tops="matMenu">
+        <button (click)="onCategorySelect()" mat-menu-item>
+          Long Sleeve T-Shirts
+        </button>
+        <button mat-menu-item>Polos</button>
+        <button mat-menu-item>Shirts (Button Ups)</button>
+        <button mat-menu-item>Short Sleeve T-Shirts</button>
+        <button mat-menu-item>Sweaters & Knitwear</button>
+        <button mat-menu-item>Sweatshirts & Hoodies</button>
+        <button mat-menu-item>Tank Tops & Sleeveless Jerseys</button>
+      </mat-menu>
+
+      <mat-menu #bottoms="matMenu">
+        <button mat-menu-item>Long Sleeve T-Shirts</button>
+        <button mat-menu-item>Polos</button>
+        <button mat-menu-item>Shirts (Button Ups)</button>
+        <button mat-menu-item>Short Sleeve T-Shirts</button>
+        <button mat-menu-item>Sweaters & Knitwear</button>
+      </mat-menu>
+
+      <mat-menu #outwear="matMenu">
+        <button mat-menu-item>Baikal oilfish</button>
+        <button mat-menu-item>Bala shark</button>
+        <button mat-menu-item>Ballan wrasse</button>
+        <button mat-menu-item>Bamboo shark</button>
+        <button mat-menu-item>Banded killifish</button>
+      </mat-menu>
+
+      <mat-menu #footwear="matMenu">
+        <button mat-menu-item>Sonoran desert toad</button>
+        <button mat-menu-item>Western toad</button>
+        <button mat-menu-item>Arroyo toad</button>
+        <button mat-menu-item>Yosemite toad</button>
+      </mat-menu>
+
+      <mat-menu #accessories="matMenu">
+        <button mat-menu-item>Banded Day Gecko</button>
+        <button mat-menu-item>Banded Gila Monster</button>
+        <button mat-menu-item>Black Tree Monitor</button>
+        <button mat-menu-item>Blue Spiny Lizard</button>
+        <button mat-menu-item disabled>Velociraptor</button>
+      </mat-menu>
+    </div>
+    <div class="col p-2">
+      <mdb-form-control class="shadow">
+        <input mdbInput type="text" id="form1" class="form-control" />
+        <label mdbLabel class="form-label" for="form1">Title</label>
+      </mdb-form-control>
+    </div>
+  </div>
+
+  <div style="row-gap: 20px" class="d-flex flex-row">
+    <div class="col p-2">
+      <mdb-form-control class="shadow">
+        <input mdbInput type="text" id="form1" class="form-control" />
+        <label mdbLabel class="form-label" for="form1">Designer</label>
+      </mdb-form-control>
+    </div>
+    <div class="col p-2">
+      <button
+        style="width: 100%"
+        mat-stroked-button
+        mat-raised-button
+        [disabled]="sizeDisabled"
+        mat-button
+        [matMenuTriggerFor]="categories"
+      >
+        Size<mat-icon aria-hidden="false" aria-label="Example home icon"
+          >keyboard_arrow_down</mat-icon
+        >
+      </button>
+      <mat-menu #categories="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="tops">Tops</button>
+        <button mat-menu-item [matMenuTriggerFor]="bottoms">Bottom</button>
+        <button mat-menu-item [matMenuTriggerFor]="outwear">Outwear</button>
+        <button mat-menu-item [matMenuTriggerFor]="footwear">Footwear</button>
+        <button mat-menu-item [matMenuTriggerFor]="accessories">
+          Accessories
+        </button>
+      </mat-menu>
+
+      <mat-menu #tops="matMenu">
+        <button mat-menu-item>Long Sleeve T-Shirts</button>
+        <button mat-menu-item>Polos</button>
+        <button mat-menu-item>Shirts (Button Ups)</button>
+        <button mat-menu-item>Short Sleeve T-Shirts</button>
+        <button mat-menu-item>Sweaters & Knitwear</button>
+        <button mat-menu-item>Sweatshirts & Hoodies</button>
+        <button mat-menu-item>Tank Tops & Sleeveless Jerseys</button>
+      </mat-menu>
+
+      <mat-menu #bottoms="matMenu">
+        <button mat-menu-item>Long Sleeve T-Shirts</button>
+        <button mat-menu-item>Polos</button>
+        <button mat-menu-item>Shirts (Button Ups)</button>
+        <button mat-menu-item>Short Sleeve T-Shirts</button>
+        <button mat-menu-item>Sweaters & Knitwear</button>
+      </mat-menu>
+
+      <mat-menu #outwear="matMenu">
+        <button mat-menu-item>Baikal oilfish</button>
+        <button mat-menu-item>Bala shark</button>
+        <button mat-menu-item>Ballan wrasse</button>
+        <button mat-menu-item>Bamboo shark</button>
+        <button mat-menu-item>Banded killifish</button>
+      </mat-menu>
+
+      <mat-menu #footwear="matMenu">
+        <button mat-menu-item>Sonoran desert toad</button>
+        <button mat-menu-item>Western toad</button>
+        <button mat-menu-item>Arroyo toad</button>
+        <button mat-menu-item>Yosemite toad</button>
+      </mat-menu>
+
+      <mat-menu #accessories="matMenu">
+        <button mat-menu-item>Banded Day Gecko</button>
+        <button mat-menu-item>Banded Gila Monster</button>
+        <button mat-menu-item>Black Tree Monitor</button>
+        <button mat-menu-item>Blue Spiny Lizard</button>
+        <button mat-menu-item disabled>Velociraptor</button>
+      </mat-menu>
+    </div>
+  </div>
+
+  <div style="row-gap: 20px" class="d-flex flex-row">
+    <div class="col p-2">
+      <button
+        style="width: 100%"
+        mat-stroked-button
+        mat-raised-button
+        mat-button
+        [matMenuTriggerFor]="categories"
+      >
+        Category<mat-icon aria-hidden="false" aria-label="Example home icon"
+          >keyboard_arrow_down</mat-icon
+        >
+      </button>
+      <mat-menu #categories="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="tops">Tops</button>
+        <button mat-menu-item [matMenuTriggerFor]="bottoms">Bottom</button>
+        <button mat-menu-item [matMenuTriggerFor]="outwear">Outwear</button>
+        <button mat-menu-item [matMenuTriggerFor]="footwear">Footwear</button>
+        <button mat-menu-item [matMenuTriggerFor]="accessories">
+          Accessories
+        </button>
+      </mat-menu>
+    </div>
+    <div class="col p-2">
+      <button
+        style="width: 100%"
+        mat-stroked-button
+        mat-raised-button
+        [style.background]="color"
+        [cpPresetColors]="[
+          '#fff',
+          '#000',
+          '#2889e9',
+          '#e920e9',
+          '#fff500',
+          'rgb(236,64,64)'
+        ]"
+        [(colorPicker)]="color"
+        mat-button
+      >
+        {{ hex2name(color) }}
+      </button>
+    </div>
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Recipient's username"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+  <label for="basic-url" class="form-label">Your vanity URL</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon3"
+      >https://example.com/users/</span
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+    />
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input
+      type="text"
+      class="form-control"
+      aria-label="Amount (to the nearest dollar)"
+    />
+    <span class="input-group-text">.00</span>
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Username"
+      aria-label="Username"
+    />
+    <span class="input-group-text">@</span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Server"
+      aria-label="Server"
+    />
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">With textarea</span>
+    <textarea class="form-control" aria-label="With textarea"></textarea>
+  </div>
+  <div>
+    <button mat-button matStepperNext>Next</button>
+  </div>
+</form>
