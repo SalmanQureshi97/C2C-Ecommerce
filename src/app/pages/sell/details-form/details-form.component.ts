@@ -9,6 +9,7 @@ export class DetailsFormComponent implements OnInit {
   type = 'type';
   sizeLabel = 'Please Select Category First';
   sizeDisabled = true;
+  condition = ['Brand New', 'Barely Worn', 'Used', 'Very Worn'];
   constructor() {}
   color = '#2889e9';
   ngOnInit(): void {}

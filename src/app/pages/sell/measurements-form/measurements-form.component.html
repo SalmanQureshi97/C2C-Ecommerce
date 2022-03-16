@@ -1,1 +1,44 @@
-<p>measurements-form works!</p>
+<div class="container">
+  <h3>Measurements</h3>
+
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle checked value="italic">In</mat-button-toggle>
+    <mat-button-toggle value="underline">Cm</mat-button-toggle>
+  </mat-button-toggle-group>
+  <br />
+  <p style="margin-top: 5px; font-weight: lighter">
+    You have a higher chance of selling your piece if you add all the
+    measurements
+  </p>
+
+  <mat-grid-list cols="3" rowHeight="6:1">
+    <mat-grid-tile>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h6>Chest</h6>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="col">
+            <mdb-form-control>
+              <input
+                mdbInput
+                type="text"
+                id="formControlLg"
+                class="form-control"
+              />
+              <label mdbLabel class="form-label" for="formControlLg"
+                >Form control lg</label
+              >
+            </mdb-form-control>
+          </div>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list>
+</div>
