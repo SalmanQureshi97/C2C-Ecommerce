@@ -17,41 +17,17 @@
       <app-details-form></app-details-form>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" label="Measurements">
-      <form [formGroup]="secondFormGroup">
-        <app-measurements-form></app-measurements-form>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+      <app-measurements-form></app-measurements-form>
     </mat-step>
 
     <mat-step [stepControl]="thirdFormGroup" label="Pricing">
-      <form [formGroup]="thirdFormGroup">
-        <p>wow</p>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+      <app-pricing-form></app-pricing-form>
     </mat-step>
     <mat-step [stepControl]="thirdFormGroup" label="Shipping">
-      <form [formGroup]="thirdFormGroup">
-        <p>wow</p>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+      <app-shipping-form></app-shipping-form>
     </mat-step>
     <mat-step [stepControl]="thirdFormGroup" label="Photos">
-      <form [formGroup]="thirdFormGroup">
-        <p>wow</p>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+      <app-photos-form></app-photos-form>
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>

@@ -1,1 +1,64 @@
-<p>shipping-form works!</p>
+<div class="container">
+  <h3>Shipping</h3>
+
+  <p style="margin-top: 5px; font-weight: lighter">
+    You can decide which cities you can ship to and set the pricing accordingly.
+  </p>
+
+  <mat-grid-list cols="3" rowHeight="6:1">
+    <mat-grid-tile>
+      <div class="form-check form-switch">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Across Pakistan</label
+        >
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="form-check form-switch">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Islamabad</label
+        >
+      </div></mat-grid-tile
+    >
+    <mat-grid-tile>
+      <div class="form-check form-switch">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Lahore</label
+        >
+      </div></mat-grid-tile
+    >
+    <mat-grid-tile>
+      <div class="form-check form-switch">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Karachi</label
+        >
+      </div></mat-grid-tile
+    >
+  </mat-grid-list>
+
+  <button style="float: right" mat-button matStepperNext>Next</button>
+</div>

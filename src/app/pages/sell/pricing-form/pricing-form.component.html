@@ -1,1 +1,19 @@
-<p>pricing-form works!</p>
+<div class="container">
+  <h3>Price</h3>
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>PKR</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" />
+  </mat-form-field>
+  <div class="form-check form-switch">
+    <input
+      mdbCheckbox
+      class="form-check-input"
+      type="checkbox"
+      id="flexSwitchCheckDefault"
+    />
+    <label class="form-check-label" for="flexSwitchCheckDefault"
+      >Accept Offers</label
+    >
+  </div>
+  <button style="float: right" mat-button matStepperNext>Next</button>
+</div>

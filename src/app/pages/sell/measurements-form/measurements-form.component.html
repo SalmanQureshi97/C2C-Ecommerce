@@ -14,31 +14,67 @@
   <mat-grid-list cols="3" rowHeight="6:1">
     <mat-grid-tile>
       <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <h6>Chest</h6>
-            <i class="fas fa-info-circle"></i>
-          </div>
-          <div class="col">
-            <mdb-form-control>
-              <input
-                mdbInput
-                type="text"
-                id="formControlLg"
-                class="form-control"
-              />
-              <label mdbLabel class="form-label" for="formControlLg"
-                >Form control lg</label
-              >
-            </mdb-form-control>
-          </div>
-        </div>
+        <mdb-form-control>
+          <input mdbInput type="text" id="formControlLg" class="form-control" />
+          <label mdbLabel class="form-label" for="formControlLg">
+            <h6>
+              Chest <i style="font-size: small; margin-right: 1px">(in)</i>
+            </h6>
+          </label>
+        </mdb-form-control>
       </div>
     </mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile
+      ><div class="container-fluid">
+        <mdb-form-control>
+          <input mdbInput type="text" id="formControlLg" class="form-control" />
+          <label mdbLabel class="form-label" for="formControlLg">
+            <h6>
+              Length <i style="font-size: small; margin-right: 1px">(in)</i>
+            </h6>
+          </label>
+        </mdb-form-control>
+      </div></mat-grid-tile
+    >
+    <mat-grid-tile
+      ><div class="container-fluid">
+        <mdb-form-control>
+          <input mdbInput type="text" id="formControlLg" class="form-control" />
+          <label mdbLabel class="form-label" for="formControlLg">
+            <h6>
+              Shoulders <i style="font-size: small; margin-right: 1px">(in)</i>
+            </h6>
+          </label>
+        </mdb-form-control>
+      </div></mat-grid-tile
+    >
+    <mat-grid-tile
+      ><div class="container-fluid">
+        <mdb-form-control>
+          <input mdbInput type="text" id="formControlLg" class="form-control" />
+          <label mdbLabel class="form-label" for="formControlLg">
+            <h6>
+              Sleeve Length
+              <i style="font-size: small; margin-right: 1px">(in)</i>
+            </h6>
+          </label>
+        </mdb-form-control>
+      </div></mat-grid-tile
+    >
+    <mat-grid-tile
+      ><div class="container-fluid">
+        <mdb-form-control>
+          <input mdbInput type="text" id="formControlLg" class="form-control" />
+          <label mdbLabel class="form-label" for="formControlLg">
+            <h6>
+              Hem
+              <i style="font-size: small; margin-right: 1px">(in)</i>
+            </h6>
+          </label>
+        </mdb-form-control>
+      </div></mat-grid-tile
+    >
   </mat-grid-list>
+
+  <button style="float: right" mat-button matStepperNext>Next</button>
 </div>
